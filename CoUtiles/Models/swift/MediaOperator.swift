@@ -10,35 +10,36 @@ import UIKit
 import AVFoundation
 import ImageIO
 
-protocol MediaOperatorDelegate {
+public  protocol MediaOperatorDelegate {
     func receveCapturePhoto(image: UIImage)
 }
-public class MediaOperator: NSObject {
+
+open class MediaOperator: NSObject {
     
-    var delegate : MediaOperatorDelegate?
+    public var delegate : MediaOperatorDelegate?
     
     //Get devices cameras
-    lazy var devices : [AVCaptureDevice] = {
+    public lazy var devices : [AVCaptureDevice] = {
         let device  = AVCaptureDevice.DiscoverySession(deviceTypes:
             [.builtInTrueDepthCamera, .builtInDualCamera, .builtInWideAngleCamera],mediaType: .video, position: .unspecified)
         return device.devices
     }()
     
-    lazy var fontCamera : AVCaptureDevice? = {
+    public lazy var fontCamera : AVCaptureDevice? = {
         return self.getCamera(position: .front) ?? nil
     }()
     
-    lazy var backCamera : AVCaptureDevice? = {
+    public lazy var backCamera : AVCaptureDevice? = {
         return self.getCamera(position: .back) ?? nil
     }()
     
-    var currentInputDevice : AVCaptureDevice?
+    public var currentInputDevice : AVCaptureDevice?
     
     //Instance Session
-    var captureSession = AVCaptureSession()
+    public var captureSession = AVCaptureSession()
     
     //Setting Input defult from backCamera
-    lazy var captureDefultInput : AVCaptureInput? = {
+    public lazy var captureDefultInput : AVCaptureInput? = {
         if let frontCamera  = self.backCamera {
             self.currentInputDevice = frontCamera
             return try? AVCaptureDeviceInput.init(device: frontCamera)
@@ -46,10 +47,10 @@ public class MediaOperator: NSObject {
         return nil
     }()
     
-    var currentInput : AVCaptureInput?
+    public var currentInput : AVCaptureInput?
     
     //Setting Output
-    lazy var avOutput : AVCaptureOutput = {
+    public lazy var avOutput : AVCaptureOutput = {
         let photoOutput = AVCapturePhotoOutput()
         let photoSetting = AVCapturePhotoSettings()
         photoSetting.flashMode = self.currentFalshMode
@@ -58,20 +59,20 @@ public class MediaOperator: NSObject {
         return photoOutput
     }()
     
-    var currentFalshMode : AVCaptureDevice.FlashMode  = .off
+    public var currentFalshMode : AVCaptureDevice.FlashMode  = .off
     
     //PhotoSetting
     var photoSetting : AVCapturePhotoSettings?
     
     //setting displayPreviewlayr
-    lazy var previewLayer : AVCaptureVideoPreviewLayer = {
+    public lazy var previewLayer : AVCaptureVideoPreviewLayer = {
         let previewLayer = AVCaptureVideoPreviewLayer.init(session: self.captureSession)
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         return previewLayer
     }()
     
-//    MARK: -func
-    func instance() -> MediaOperator {
+    //    MARK: -func
+    public func instance() -> MediaOperator {
         
         if let input = self.captureDefultInput {
             self.currentInput = input
@@ -81,15 +82,15 @@ public class MediaOperator: NSObject {
         return self
     }
     
-    func startCapture() {
+    public func startCapture() {
         self.captureSession.startRunning()
     }
     
-    func stopCapture() {
+    public func stopCapture() {
         self.captureSession.stopRunning()
     }
     
-    func take() {
+    public func take() {
         let avcaptureConnection = self.avOutput.connection(with: .video)
         avcaptureConnection?.videoOrientation = AVCaptureVideoOrientation.landscapeRight
         if let currentPhotoSetting =  self.photoSetting {
@@ -100,7 +101,7 @@ public class MediaOperator: NSObject {
         }
     }
     
-    func getCamera(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
+    public func getCamera(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
         let cameras = self.devices.compactMap{$0}
         for carmer in cameras {
             if carmer.position == position {
@@ -110,7 +111,7 @@ public class MediaOperator: NSObject {
         return nil
     }
     
-    func swithInputCamera() {
+    public func swithInputCamera() {
         if let currentDevice = self.currentInputDevice {
             
             switch currentDevice.position {
@@ -150,7 +151,7 @@ public class MediaOperator: NSObject {
         }
     }
     
-    func modifyFlashMode(flashMode: AVCaptureDevice.FlashMode ) {
+    public func modifyFlashMode(flashMode: AVCaptureDevice.FlashMode ) {
         self.photoSetting?.flashMode = flashMode
     }
 }
@@ -185,7 +186,7 @@ extension MediaOperator : AVCapturePhotoCaptureDelegate {
             rotateImage = image.rotate(angle: -pi )
             
         case .landscapeLeft:
-//            rotateImage = image.rotate(angle: pi * 2 )
+            //            rotateImage = image.rotate(angle: pi * 2 )
             rotateImage = image
             
         case .portrait:
@@ -202,30 +203,6 @@ extension MediaOperator : AVCapturePhotoCaptureDelegate {
     }
 }
 
-
-
-
-
-//
-// func rotateImage(_ image: UIImage, withAngle angle: Double) -> UIImage? {
-//    if angle.truncatingRemainder(dividingBy: 360) == 0 { return image }
-//    let imageRect = CGRect(origin: .zero, size: image.size)
-//    let radian = CGFloat(angle / 180 * Double.pi)
-//    let rotatedTransform = CGAffineTransform.identity.rotated(by: radian)
-//    var rotatedRect = imageRect.applying(rotatedTransform)
-//    rotatedRect.origin.x = 0
-//    rotatedRect.origin.y = 0
-//    UIGraphicsBeginImageContext(rotatedRect.size)
-//    guard let context = UIGraphicsGetCurrentContext() else { return nil }
-//    context.translateBy(x: rotatedRect.width / 2, y: rotatedRect.height / 2)
-//    context.rotate(by: radian)
-//    context.translateBy(x: -image.size.width / 2, y: -image.size.height / 2)
-//    image.draw(at: .zero)
-//    let rotatedImage = UIGraphicsGetImageFromCurrentImageContext()
-//    UIGraphicsEndImageContext()
-//    return rotatedImage
-//}
-    
 extension UIImage {
     
     func rotate(angle: Double) -> UIImage? {
