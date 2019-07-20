@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CaptureOptionTableview" customModule="CoUtiles" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="508" height="619"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pat-h3-Rf6">
+                    <rect key="frame" x="0.0" y="0.0" width="508" height="619"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Pat-h3-Rf6" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="4qA-Vs-EKL"/>
+                <constraint firstAttribute="bottom" secondItem="Pat-h3-Rf6" secondAttribute="bottom" id="Fhr-Y7-pJf"/>
+                <constraint firstItem="Pat-h3-Rf6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ftb-08-MB2"/>
+                <constraint firstItem="Pat-h3-Rf6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kPO-Ad-0WG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="tableview" destination="Pat-h3-Rf6" id="3MB-fj-6Ye"/>
+            </connections>
+            <point key="canvasLocation" x="205.79710144927537" y="13.727678571428571"/>
+        </view>
+    </objects>
+</document>

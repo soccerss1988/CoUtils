@@ -138,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Views;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		098DBB8622E203D500A9C325 /* Viewcontrollers */ = {
