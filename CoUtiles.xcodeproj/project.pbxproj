@@ -28,10 +28,6 @@
 		09BF72A722E311D500EAC931 /* UIView+Enhance.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF729722E311D500EAC931 /* UIView+Enhance.m */; };
 		09BF72AB22E3121700EAC931 /* MediaOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF72A922E3121700EAC931 /* MediaOperator.swift */; };
 		09BF72AC22E3121700EAC931 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF72AA22E3121700EAC931 /* Device.swift */; };
-		09BF72B122E3122600EAC931 /* FileUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF72AD22E3122600EAC931 /* FileUnit.m */; };
-		09BF72B222E3122600EAC931 /* ImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BF72AE22E3122600EAC931 /* ImageManager.h */; };
-		09BF72B322E3122600EAC931 /* FileUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BF72AF22E3122600EAC931 /* FileUnit.h */; };
-		09BF72B422E3122600EAC931 /* ImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF72B022E3122600EAC931 /* ImageManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +65,6 @@
 		09BF729722E311D500EAC931 /* UIView+Enhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Enhance.m"; path = "CoUtiles/Categorys/UIView+Enhance.m"; sourceTree = SOURCE_ROOT; };
 		09BF72A922E3121700EAC931 /* MediaOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaOperator.swift; path = swift/MediaOperator.swift; sourceTree = "<group>"; };
 		09BF72AA22E3121700EAC931 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = swift/Device.swift; sourceTree = "<group>"; };
-		09BF72AD22E3122600EAC931 /* FileUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileUnit.m; path = CoUtiles/Models/Oc/FileUnit.m; sourceTree = SOURCE_ROOT; };
-		09BF72AE22E3122600EAC931 /* ImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageManager.h; path = CoUtiles/Models/Oc/ImageManager.h; sourceTree = SOURCE_ROOT; };
-		09BF72AF22E3122600EAC931 /* FileUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileUnit.h; path = CoUtiles/Models/Oc/FileUnit.h; sourceTree = SOURCE_ROOT; };
-		09BF72B022E3122600EAC931 /* ImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageManager.m; path = CoUtiles/Models/Oc/ImageManager.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,10 +184,6 @@
 		09BF72A822E311F300EAC931 /* Ocs */ = {
 			isa = PBXGroup;
 			children = (
-				09BF72AF22E3122600EAC931 /* FileUnit.h */,
-				09BF72AD22E3122600EAC931 /* FileUnit.m */,
-				09BF72AE22E3122600EAC931 /* ImageManager.h */,
-				09BF72B022E3122600EAC931 /* ImageManager.m */,
 			);
 			path = Ocs;
 			sourceTree = "<group>";
@@ -209,9 +197,7 @@
 			files = (
 				09BF72A222E311D500EAC931 /* UIViewController+Enhance.h in Headers */,
 				09BF729F22E311D500EAC931 /* NSDictionary+Enhance.h in Headers */,
-				09BF72B222E3122600EAC931 /* ImageManager.h in Headers */,
 				09BF729C22E311D500EAC931 /* NSArray+Enhance.h in Headers */,
-				09BF72B322E3122600EAC931 /* FileUnit.h in Headers */,
 				09BF729E22E311D500EAC931 /* NSString+Enhance.h in Headers */,
 				09BF72A422E311D500EAC931 /* UIImage+Enhance.h in Headers */,
 				09BF72A622E311D500EAC931 /* NSData+Enhance.h in Headers */,
@@ -323,8 +309,6 @@
 				09BF72AB22E3121700EAC931 /* MediaOperator.swift in Sources */,
 				09BF729822E311D500EAC931 /* UIImage+Enhance.m in Sources */,
 				09BF72A722E311D500EAC931 /* UIView+Enhance.m in Sources */,
-				09BF72B422E3122600EAC931 /* ImageManager.m in Sources */,
-				09BF72B122E3122600EAC931 /* FileUnit.m in Sources */,
 				09BF729A22E311D500EAC931 /* UIViewController+Enhance.m in Sources */,
 				09BF729D22E311D500EAC931 /* NSFileManager+Enhance.m in Sources */,
 				09BF72A322E311D500EAC931 /* NSDictionary+Enhance.m in Sources */,
