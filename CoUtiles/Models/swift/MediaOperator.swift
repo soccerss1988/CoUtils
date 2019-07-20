@@ -9,10 +9,11 @@
 import UIKit
 import AVFoundation
 import ImageIO
+
 protocol MediaOperatorDelegate {
     func receveCapturePhoto(image: UIImage)
 }
-class MediaOperator: NSObject {
+public class MediaOperator: NSObject {
     
     var delegate : MediaOperatorDelegate?
     
@@ -156,7 +157,7 @@ class MediaOperator: NSObject {
 
 extension MediaOperator : AVCapturePhotoCaptureDelegate {
     
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+    public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         if(error != nil ) {
             print("error= \(String(error?.localizedDescription ?? ""))")
         } else {
