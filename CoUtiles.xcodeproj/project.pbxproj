@@ -10,6 +10,28 @@
 		098DBB7422E202F600A9C325 /* CoUtiles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098DBB6A22E202F600A9C325 /* CoUtiles.framework */; };
 		098DBB7922E202F600A9C325 /* CoUtilesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098DBB7822E202F600A9C325 /* CoUtilesTests.swift */; };
 		098DBB7B22E202F600A9C325 /* CoUtiles.h in Headers */ = {isa = PBXBuildFile; fileRef = 098DBB6D22E202F600A9C325 /* CoUtiles.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09BF729822E311D500EAC931 /* UIImage+Enhance.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF728822E311D500EAC931 /* UIImage+Enhance.m */; };
+		09BF729922E311D500EAC931 /* NSArray+Enhance.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF728922E311D500EAC931 /* NSArray+Enhance.m */; };
+		09BF729A22E311D500EAC931 /* UIViewController+Enhance.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF728A22E311D500EAC931 /* UIViewController+Enhance.m */; };
+		09BF729B22E311D500EAC931 /* NSString+Enhance.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF728B22E311D500EAC931 /* NSString+Enhance.m */; };
+		09BF729C22E311D500EAC931 /* NSArray+Enhance.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BF728C22E311D500EAC931 /* NSArray+Enhance.h */; };
+		09BF729D22E311D500EAC931 /* NSFileManager+Enhance.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF728D22E311D500EAC931 /* NSFileManager+Enhance.m */; };
+		09BF729E22E311D500EAC931 /* NSString+Enhance.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BF728E22E311D500EAC931 /* NSString+Enhance.h */; };
+		09BF729F22E311D500EAC931 /* NSDictionary+Enhance.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BF728F22E311D500EAC931 /* NSDictionary+Enhance.h */; };
+		09BF72A022E311D500EAC931 /* UIView+Enhance.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BF729022E311D500EAC931 /* UIView+Enhance.h */; };
+		09BF72A122E311D500EAC931 /* NSData+Enhance.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF729122E311D500EAC931 /* NSData+Enhance.m */; };
+		09BF72A222E311D500EAC931 /* UIViewController+Enhance.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BF729222E311D500EAC931 /* UIViewController+Enhance.h */; };
+		09BF72A322E311D500EAC931 /* NSDictionary+Enhance.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF729322E311D500EAC931 /* NSDictionary+Enhance.m */; };
+		09BF72A422E311D500EAC931 /* UIImage+Enhance.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BF729422E311D500EAC931 /* UIImage+Enhance.h */; };
+		09BF72A522E311D500EAC931 /* NSFileManager+Enhance.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BF729522E311D500EAC931 /* NSFileManager+Enhance.h */; };
+		09BF72A622E311D500EAC931 /* NSData+Enhance.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BF729622E311D500EAC931 /* NSData+Enhance.h */; };
+		09BF72A722E311D500EAC931 /* UIView+Enhance.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF729722E311D500EAC931 /* UIView+Enhance.m */; };
+		09BF72AB22E3121700EAC931 /* MediaOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF72A922E3121700EAC931 /* MediaOperator.swift */; };
+		09BF72AC22E3121700EAC931 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF72AA22E3121700EAC931 /* Device.swift */; };
+		09BF72B122E3122600EAC931 /* FileUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF72AD22E3122600EAC931 /* FileUnit.m */; };
+		09BF72B222E3122600EAC931 /* ImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BF72AE22E3122600EAC931 /* ImageManager.h */; };
+		09BF72B322E3122600EAC931 /* FileUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BF72AF22E3122600EAC931 /* FileUnit.h */; };
+		09BF72B422E3122600EAC931 /* ImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF72B022E3122600EAC931 /* ImageManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +51,28 @@
 		098DBB7322E202F600A9C325 /* CoUtilesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoUtilesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		098DBB7822E202F600A9C325 /* CoUtilesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoUtilesTests.swift; sourceTree = "<group>"; };
 		098DBB7A22E202F600A9C325 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09BF728822E311D500EAC931 /* UIImage+Enhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Enhance.m"; path = "CoUtiles/Categorys/UIImage+Enhance.m"; sourceTree = SOURCE_ROOT; };
+		09BF728922E311D500EAC931 /* NSArray+Enhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Enhance.m"; path = "CoUtiles/Categorys/NSArray+Enhance.m"; sourceTree = SOURCE_ROOT; };
+		09BF728A22E311D500EAC931 /* UIViewController+Enhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Enhance.m"; path = "CoUtiles/Categorys/UIViewController+Enhance.m"; sourceTree = SOURCE_ROOT; };
+		09BF728B22E311D500EAC931 /* NSString+Enhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Enhance.m"; path = "CoUtiles/Categorys/NSString+Enhance.m"; sourceTree = SOURCE_ROOT; };
+		09BF728C22E311D500EAC931 /* NSArray+Enhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Enhance.h"; path = "CoUtiles/Categorys/NSArray+Enhance.h"; sourceTree = SOURCE_ROOT; };
+		09BF728D22E311D500EAC931 /* NSFileManager+Enhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+Enhance.m"; path = "CoUtiles/Categorys/NSFileManager+Enhance.m"; sourceTree = SOURCE_ROOT; };
+		09BF728E22E311D500EAC931 /* NSString+Enhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Enhance.h"; path = "CoUtiles/Categorys/NSString+Enhance.h"; sourceTree = SOURCE_ROOT; };
+		09BF728F22E311D500EAC931 /* NSDictionary+Enhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Enhance.h"; path = "CoUtiles/Categorys/NSDictionary+Enhance.h"; sourceTree = SOURCE_ROOT; };
+		09BF729022E311D500EAC931 /* UIView+Enhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Enhance.h"; path = "CoUtiles/Categorys/UIView+Enhance.h"; sourceTree = SOURCE_ROOT; };
+		09BF729122E311D500EAC931 /* NSData+Enhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Enhance.m"; path = "CoUtiles/Categorys/NSData+Enhance.m"; sourceTree = SOURCE_ROOT; };
+		09BF729222E311D500EAC931 /* UIViewController+Enhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Enhance.h"; path = "CoUtiles/Categorys/UIViewController+Enhance.h"; sourceTree = SOURCE_ROOT; };
+		09BF729322E311D500EAC931 /* NSDictionary+Enhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Enhance.m"; path = "CoUtiles/Categorys/NSDictionary+Enhance.m"; sourceTree = SOURCE_ROOT; };
+		09BF729422E311D500EAC931 /* UIImage+Enhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Enhance.h"; path = "CoUtiles/Categorys/UIImage+Enhance.h"; sourceTree = SOURCE_ROOT; };
+		09BF729522E311D500EAC931 /* NSFileManager+Enhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+Enhance.h"; path = "CoUtiles/Categorys/NSFileManager+Enhance.h"; sourceTree = SOURCE_ROOT; };
+		09BF729622E311D500EAC931 /* NSData+Enhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Enhance.h"; path = "CoUtiles/Categorys/NSData+Enhance.h"; sourceTree = SOURCE_ROOT; };
+		09BF729722E311D500EAC931 /* UIView+Enhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Enhance.m"; path = "CoUtiles/Categorys/UIView+Enhance.m"; sourceTree = SOURCE_ROOT; };
+		09BF72A922E3121700EAC931 /* MediaOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaOperator.swift; path = swift/MediaOperator.swift; sourceTree = "<group>"; };
+		09BF72AA22E3121700EAC931 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = swift/Device.swift; sourceTree = "<group>"; };
+		09BF72AD22E3122600EAC931 /* FileUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileUnit.m; path = CoUtiles/Models/Oc/FileUnit.m; sourceTree = SOURCE_ROOT; };
+		09BF72AE22E3122600EAC931 /* ImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageManager.h; path = CoUtiles/Models/Oc/ImageManager.h; sourceTree = SOURCE_ROOT; };
+		09BF72AF22E3122600EAC931 /* FileUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileUnit.h; path = CoUtiles/Models/Oc/FileUnit.h; sourceTree = SOURCE_ROOT; };
+		09BF72B022E3122600EAC931 /* ImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageManager.m; path = CoUtiles/Models/Oc/ImageManager.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +115,11 @@
 		098DBB6C22E202F600A9C325 /* CoUtiles */ = {
 			isa = PBXGroup;
 			children = (
+				09BF728722E311B600EAC931 /* Categorys */,
+				098DBB8722E203E200A9C325 /* Models */,
+				098DBB8622E203D500A9C325 /* Viewcontrollers */,
+				098DBB8522E203CD00A9C325 /* Views */,
+				098DBB8422E203BF00A9C325 /* Extensions */,
 				098DBB6D22E202F600A9C325 /* CoUtiles.h */,
 				098DBB6E22E202F600A9C325 /* Info.plist */,
 			);
@@ -86,6 +135,71 @@
 			path = CoUtilesTests;
 			sourceTree = "<group>";
 		};
+		098DBB8422E203BF00A9C325 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		098DBB8522E203CD00A9C325 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		098DBB8622E203D500A9C325 /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		098DBB8722E203E200A9C325 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				09BF72AA22E3121700EAC931 /* Device.swift */,
+				09BF72A922E3121700EAC931 /* MediaOperator.swift */,
+				09BF72A822E311F300EAC931 /* Ocs */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		09BF728722E311B600EAC931 /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				09BF728C22E311D500EAC931 /* NSArray+Enhance.h */,
+				09BF728922E311D500EAC931 /* NSArray+Enhance.m */,
+				09BF729622E311D500EAC931 /* NSData+Enhance.h */,
+				09BF729122E311D500EAC931 /* NSData+Enhance.m */,
+				09BF728F22E311D500EAC931 /* NSDictionary+Enhance.h */,
+				09BF729322E311D500EAC931 /* NSDictionary+Enhance.m */,
+				09BF729522E311D500EAC931 /* NSFileManager+Enhance.h */,
+				09BF728D22E311D500EAC931 /* NSFileManager+Enhance.m */,
+				09BF728E22E311D500EAC931 /* NSString+Enhance.h */,
+				09BF728B22E311D500EAC931 /* NSString+Enhance.m */,
+				09BF729422E311D500EAC931 /* UIImage+Enhance.h */,
+				09BF728822E311D500EAC931 /* UIImage+Enhance.m */,
+				09BF729022E311D500EAC931 /* UIView+Enhance.h */,
+				09BF729722E311D500EAC931 /* UIView+Enhance.m */,
+				09BF729222E311D500EAC931 /* UIViewController+Enhance.h */,
+				09BF728A22E311D500EAC931 /* UIViewController+Enhance.m */,
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
+		09BF72A822E311F300EAC931 /* Ocs */ = {
+			isa = PBXGroup;
+			children = (
+				09BF72AF22E3122600EAC931 /* FileUnit.h */,
+				09BF72AD22E3122600EAC931 /* FileUnit.m */,
+				09BF72AE22E3122600EAC931 /* ImageManager.h */,
+				09BF72B022E3122600EAC931 /* ImageManager.m */,
+			);
+			path = Ocs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -93,6 +207,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09BF72A222E311D500EAC931 /* UIViewController+Enhance.h in Headers */,
+				09BF729F22E311D500EAC931 /* NSDictionary+Enhance.h in Headers */,
+				09BF72B222E3122600EAC931 /* ImageManager.h in Headers */,
+				09BF729C22E311D500EAC931 /* NSArray+Enhance.h in Headers */,
+				09BF72B322E3122600EAC931 /* FileUnit.h in Headers */,
+				09BF729E22E311D500EAC931 /* NSString+Enhance.h in Headers */,
+				09BF72A422E311D500EAC931 /* UIImage+Enhance.h in Headers */,
+				09BF72A622E311D500EAC931 /* NSData+Enhance.h in Headers */,
+				09BF72A022E311D500EAC931 /* UIView+Enhance.h in Headers */,
+				09BF72A522E311D500EAC931 /* NSFileManager+Enhance.h in Headers */,
 				098DBB7B22E202F600A9C325 /* CoUtiles.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +272,7 @@
 				TargetAttributes = {
 					098DBB6922E202F600A9C325 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					098DBB7222E202F600A9C325 = {
 						CreatedOnToolsVersion = 11.0;
@@ -195,6 +320,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09BF72AB22E3121700EAC931 /* MediaOperator.swift in Sources */,
+				09BF729822E311D500EAC931 /* UIImage+Enhance.m in Sources */,
+				09BF72A722E311D500EAC931 /* UIView+Enhance.m in Sources */,
+				09BF72B422E3122600EAC931 /* ImageManager.m in Sources */,
+				09BF72B122E3122600EAC931 /* FileUnit.m in Sources */,
+				09BF729A22E311D500EAC931 /* UIViewController+Enhance.m in Sources */,
+				09BF729D22E311D500EAC931 /* NSFileManager+Enhance.m in Sources */,
+				09BF72A322E311D500EAC931 /* NSDictionary+Enhance.m in Sources */,
+				09BF72A122E311D500EAC931 /* NSData+Enhance.m in Sources */,
+				09BF729B22E311D500EAC931 /* NSString+Enhance.m in Sources */,
+				09BF729922E311D500EAC931 /* NSArray+Enhance.m in Sources */,
+				09BF72AC22E3121700EAC931 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +477,7 @@
 		098DBB7F22E202F600A9C325 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = LQYRMHEZEZ;
@@ -356,6 +494,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.jHuang.CoUtiles;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +503,7 @@
 		098DBB8022E202F600A9C325 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = LQYRMHEZEZ;
@@ -388,6 +528,7 @@
 		098DBB8222E202F600A9C325 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LQYRMHEZEZ;
 				INFOPLIST_FILE = CoUtilesTests/Info.plist;
@@ -406,6 +547,7 @@
 		098DBB8322E202F600A9C325 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LQYRMHEZEZ;
 				INFOPLIST_FILE = CoUtilesTests/Info.plist;

@@ -6,3 +6,7 @@ CoUtiles\.xcodeproj/project\.xcworkspace/xcshareddata/IDEWorkspaceChecks\.plist
 CoUtiles\.xcodeproj/project\.xcworkspace/xcuserdata/j\.xcuserdatad/UserInterfaceState\.xcuserstate
 
 CoUtiles\.xcodeproj/xcuserdata/j\.xcuserdatad/xcschemes/xcschememanagement\.plist
+
+CoUtiles/\.DS_Store
+
+CoUtiles/Models/\.DS_Store
