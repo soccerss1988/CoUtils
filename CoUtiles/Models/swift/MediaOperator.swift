@@ -97,7 +97,6 @@ open class MediaOperator: NSObject {
             let photoSetting = AVCapturePhotoSettings(from: currentPhotoSetting)
             let photoOutput = self.avOutput as! AVCapturePhotoOutput
             photoOutput.capturePhoto(with: photoSetting, delegate: self)
-            
         }
     }
     
@@ -124,12 +123,10 @@ open class MediaOperator: NSObject {
                             self.currentInputDevice = bcakCamera
                             self.currentInput = newInput
                             self.captureSession.addInput(newInput)
-                            
                         }
                     }
                 }
-                
-                
+
             case .back:
                 
                 // turn to back camera

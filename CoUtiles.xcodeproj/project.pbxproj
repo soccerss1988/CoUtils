@@ -113,7 +113,6 @@
 				098DBB8722E203E200A9C325 /* Models */,
 				098DBB8622E203D500A9C325 /* Viewcontrollers */,
 				098DBB8522E203CD00A9C325 /* Views */,
-				098DBB8422E203BF00A9C325 /* Extensions */,
 				098DBB6D22E202F600A9C325 /* CoUtiles.h */,
 				098DBB6E22E202F600A9C325 /* Info.plist */,
 			);
@@ -127,13 +126,6 @@
 				098DBB7A22E202F600A9C325 /* Info.plist */,
 			);
 			path = CoUtilesTests;
-			sourceTree = "<group>";
-		};
-		098DBB8422E203BF00A9C325 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		098DBB8522E203CD00A9C325 /* Views */ = {
