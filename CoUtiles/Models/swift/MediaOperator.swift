@@ -9,6 +9,36 @@
 import UIKit
 import AVFoundation
 import ImageIO
+public class CurretCaptureSerring {
+    var flashMdoe : AVCaptureDevice.FlashMode = .auto
+    var whiteBlnaceMode : AVCaptureDevice.WhiteBalanceMode = .autoWhiteBalance
+    var focusMode : AVCaptureDevice.FocusMode = .autoFocus
+    var exposureMode : AVCaptureDevice.ExposureMode = .autoExpose
+    //custom value
+    var iso : Float = 0 // self.currentInputDevice?.activeFormat.minISO
+    var ev : Float = 0 //self.currentInputDevice?.minExposureTargetBias
+    var shutt : CMTime = CMTimeMake(value: 0, timescale: 0) //self.currentInputDevice?.activeFormat.minExposureDuration
+
+//    init(iso: Float, shuut: CMTime, ev: Float) {
+//        self.iso = iso
+//        self.shutt = shuut
+//        self.ev = ev
+//    }
+
+    func isoStringValue() -> String {
+        return String(format: "%i", Int(self.iso))
+    }
+
+    func shuutStringValue() -> (String,String) {
+        let valueString = String(format: "%i", Int(self.shutt.value))
+        let timescaleString = String(format: "%i", Int(self.shutt.timescale))
+        return (valueString,timescaleString)
+    }
+
+    func evStringValue() -> String {
+        return String(format: "%i", Int(self.ev))
+    }
+}
 
 public  protocol MediaOperatorDelegate {
     func receveCapturePhoto(image: UIImage)
@@ -17,6 +47,7 @@ public  protocol MediaOperatorDelegate {
 open class MediaOperator: NSObject {
     
     public var delegate : MediaOperatorDelegate?
+    public var captureSetting = CurretCaptureSerring()
     
     //Get devices cameras
     public lazy var devices : [AVCaptureDevice] = {
@@ -53,14 +84,12 @@ open class MediaOperator: NSObject {
     public lazy var avOutput : AVCaptureOutput = {
         let photoOutput = AVCapturePhotoOutput()
         let photoSetting = AVCapturePhotoSettings()
-        photoSetting.flashMode = self.currentFalshMode
+        photoSetting.flashMode = self.captureSetting.flashMdoe
         photoOutput.photoSettingsForSceneMonitoring = photoSetting
         self.photoSetting = photoSetting
         return photoOutput
     }()
-    
-    public var currentFalshMode : AVCaptureDevice.FlashMode  = .off
-    
+        
     //PhotoSetting
     var photoSetting : AVCapturePhotoSettings?
     
@@ -79,6 +108,7 @@ open class MediaOperator: NSObject {
             self.captureSession.addInput(input as AVCaptureInput)
         }
         self.captureSession.addOutput(self.avOutput)
+        self.autoMode()
         return self
     }
     
@@ -126,7 +156,7 @@ open class MediaOperator: NSObject {
                         }
                     }
                 }
-
+                
             case .back:
                 
                 // turn to back camera
@@ -149,7 +179,7 @@ open class MediaOperator: NSObject {
     }
     
     public func modifyFlashMode(flashMode: AVCaptureDevice.FlashMode ) {
-        self.photoSetting?.flashMode = flashMode
+        self.captureSetting.flashMdoe = flashMode
     }
 }
 
@@ -197,6 +227,53 @@ extension MediaOperator : AVCapturePhotoCaptureDelegate {
             return nil
         }
         return rotateImage ?? nil
+    }
+    
+    //MARK: - modeSessting
+    
+    //全自動
+    func autoMode() {
+        
+        do {
+            try self.currentInputDevice?.lockForConfiguration()
+            
+            //check support exposure
+            if self.currentInputDevice?.isExposureModeSupported(.autoExpose) == true {
+                self.currentInputDevice?.exposureMode = self.captureSetting.exposureMode
+            }
+            //check support FocusMode
+            if self.currentInputDevice?.isFocusModeSupported(.autoFocus) == true {
+                self.currentInputDevice?.focusMode = self.captureSetting.focusMode
+                
+            }
+            //check support WhiteBalance
+            if self.currentInputDevice?.isWhiteBalanceModeSupported(.autoWhiteBalance) == true {
+                self.currentInputDevice?.whiteBalanceMode = self.captureSetting.whiteBlnaceMode
+                
+            }
+            //setting flashMode
+            self.photoSetting?.flashMode = self.captureSetting.flashMdoe
+            self.currentInputDevice?.unlockForConfiguration()
+            
+        } catch {
+            print("error!! setting failed")
+        }
+    }
+    
+    //全手動模式
+    func cameraMMode(duration: CMTime, iso: Float, ev: Float) {
+        
+        do {
+            try self.currentInputDevice?.lockForConfiguration()
+            //custom exoisure
+            self.currentInputDevice?.setExposureModeCustom(duration: duration, iso: iso, completionHandler: nil)
+            
+            //set WB
+            self.currentInputDevice?.setExposureTargetBias(ev, completionHandler: nil)
+            self.currentInputDevice?.unlockForConfiguration()
+        } catch {
+            
+        }
     }
 }
 
