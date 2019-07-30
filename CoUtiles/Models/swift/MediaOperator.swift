@@ -9,34 +9,39 @@
 import UIKit
 import AVFoundation
 import ImageIO
+
 public class CurretCaptureSerring {
-    var flashMdoe : AVCaptureDevice.FlashMode = .auto
-    var whiteBlnaceMode : AVCaptureDevice.WhiteBalanceMode = .autoWhiteBalance
-    var focusMode : AVCaptureDevice.FocusMode = .autoFocus
-    var exposureMode : AVCaptureDevice.ExposureMode = .autoExpose
+    public var flashMdoe : AVCaptureDevice.FlashMode = .auto
+    public var whiteBlnaceMode : AVCaptureDevice.WhiteBalanceMode = .autoWhiteBalance
+    public var focusMode : AVCaptureDevice.FocusMode = .autoFocus
+    public var exposureMode : AVCaptureDevice.ExposureMode = .autoExpose
     //custom value
-    var iso : Float = 0 // self.currentInputDevice?.activeFormat.minISO
-    var ev : Float = 0 //self.currentInputDevice?.minExposureTargetBias
-    var shutt : CMTime = CMTimeMake(value: 0, timescale: 0) //self.currentInputDevice?.activeFormat.minExposureDuration
-
-//    init(iso: Float, shuut: CMTime, ev: Float) {
-//        self.iso = iso
-//        self.shutt = shuut
-//        self.ev = ev
-//    }
-
+    public var iso : Float = 0 // self.currentInputDevice?.activeFormat.minISO
+    public var ev : Float = 0 //self.currentInputDevice?.minExposureTargetBias
+    public var shutt : CMTime = CMTimeMake(value: 0, timescale: 0) //self.currentInputDevice?.activeFormat.minExposureDuration
+    public var k : Float = 5000
+    //    init(iso: Float, shuut: CMTime, ev: Float) {
+    //        self.iso = iso
+    //        self.shutt = shuut
+    //        self.ev = ev
+    //    }
+    
     func isoStringValue() -> String {
         return String(format: "%i", Int(self.iso))
     }
-
+    
     func shuutStringValue() -> (String,String) {
         let valueString = String(format: "%i", Int(self.shutt.value))
         let timescaleString = String(format: "%i", Int(self.shutt.timescale))
         return (valueString,timescaleString)
     }
-
+    
     func evStringValue() -> String {
         return String(format: "%i", Int(self.ev))
+    }
+    
+    public func customSetting() -> (iso:Float, shutt:CMTime, ev:Float) {
+        return(self.iso, self.shutt, self.ev)
     }
 }
 
